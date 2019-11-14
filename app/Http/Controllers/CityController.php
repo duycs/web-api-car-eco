@@ -48,6 +48,34 @@ class CityController extends Controller
                 return response()->json($city);
         }
 
+         /**
+         * @SWG\Update(
+         *     path="/api/cities",
+         *     description="Return a city after updated",
+         *     @SWG\Parameter(
+         *         name="name",
+         *         in="query",
+         *         type="string",
+         *         description="name",
+         *         required=true,
+         *     ),
+         *     @SWG\Parameter(
+         *         name="code",
+         *         in="query",
+         *         type="string",
+         *         description="code",
+         *         required=true,
+         *     ),
+         *     @SWG\Response(
+         *         response=200,
+         *         description="OK",
+         *     ),
+         *     @SWG\Response(
+         *         response=422,
+         *         description="Missing Data"
+         *     )
+         * )
+         */
         public function update(Request $request, $id)
         {
                 $city = City::findOrFail($id);
@@ -73,6 +101,34 @@ class CityController extends Controller
                 return response()->json($city);
         }
 
+         /**
+         * @SWG\Get(
+         *     path="/api/cities/{id}",
+         *     description="Return a city by id",
+         *     @SWG\Parameter(
+         *         name="name",
+         *         in="query",
+         *         type="string",
+         *         description="name",
+         *         required=true,
+         *     ),
+         *     @SWG\Parameter(
+         *         name="code",
+         *         in="query",
+         *         type="string",
+         *         description="code",
+         *         required=true,
+         *     ),
+         *     @SWG\Response(
+         *         response=200,
+         *         description="OK",
+         *     ),
+         *     @SWG\Response(
+         *         response=422,
+         *         description="Missing Data"
+         *     )
+         * )
+         */
         public function getById($id)
         {
                 $city = City::findOrFail($id);
@@ -84,6 +140,34 @@ class CityController extends Controller
                 return response()->json($city);
         }
 
+         /**
+         * @SWG\Get(
+         *     path="/api/cities",
+         *     description="Return a city listing",
+         *     @SWG\Parameter(
+         *         name="name",
+         *         in="query",
+         *         type="string",
+         *         description="name",
+         *         required=true,
+         *     ),
+         *     @SWG\Parameter(
+         *         name="code",
+         *         in="query",
+         *         type="string",
+         *         description="code",
+         *         required=true,
+         *     ),
+         *     @SWG\Response(
+         *         response=200,
+         *         description="OK",
+         *     ),
+         *     @SWG\Response(
+         *         response=422,
+         *         description="Missing Data"
+         *     )
+         * )
+         */
         public function getList(Request $request)
         {
                 // offset from 0

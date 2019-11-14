@@ -13,6 +13,34 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 
 class UserController extends Controller
 {
+         /**
+         * @SWG\Post(
+         *     path="/api/login",
+         *     description="Return user and token after login",
+         *     @SWG\Parameter(
+         *         name="email",
+         *         in="query",
+         *         type="string",
+         *         description="email",
+         *         required=true,
+         *     ),
+         *     @SWG\Parameter(
+         *         name="password",
+         *         in="query",
+         *         type="string",
+         *         description="password",
+         *         required=true,
+         *     ),
+         *     @SWG\Response(
+         *         response=200,
+         *         description="OK",
+         *     ),
+         *     @SWG\Response(
+         *         response=422,
+         *         description="Missing Data"
+         *     )
+         * )
+         */
         public function authenticate(Request $request)
         {
                 $credentials = $request->only('email', 'password');
@@ -28,6 +56,20 @@ class UserController extends Controller
                 return response()->json(compact('token'));
         }
 
+        /**
+         * @SWG\Post(
+         *     path="/api/register",
+         *     description="Return ua ser and token after created",
+         *     @SWG\Response(
+         *         response=200,
+         *         description="OK",
+         *     ),
+         *     @SWG\Response(
+         *         response=422,
+         *         description="Missing Data"
+         *     )
+         * )
+         */
         public function register(Request $request)
         {
                 $validator = Validator::make($request->all(), [
@@ -51,7 +93,27 @@ class UserController extends Controller
                 return response()->json(compact('user', 'token'), 201);
         }
 
-        
+        /**
+         * @SWG\Get(
+         *     path="/api/users/{id}",
+         *     description="Return a user by id",
+         *     @SWG\Parameter(
+         *         name="id",
+         *         in="path",
+         *         type="integer",
+         *         description="id",
+         *         required=true,
+         *     ),
+         *     @SWG\Response(
+         *         response=200,
+         *         description="OK",
+         *     ),
+         *     @SWG\Response(
+         *         response=422,
+         *         description="Missing Data"
+         *     )
+         * )
+         */
         public function getById($id)
         {
                 $user = User::findOrFail($id);

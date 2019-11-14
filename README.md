@@ -60,3 +60,7 @@ Run the application
 $ php artisan serve
 ```
 
+SWAGGER
+```
+/swagger/dist/index.html
+```
