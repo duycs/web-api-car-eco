@@ -1,0 +1,958 @@
+{
+	"info": {
+		"_postman_id": "d5266571-1fc7-405e-ae27-39c4fcc1fc7a",
+		"name": "xebin-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:8000/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "user2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "xebin apis"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/brands",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzYzMTE4NywiZXhwIjoxNTczNjM0Nzg3LCJuYmYiOjE1NzM2MzExODcsImp0aSI6InVaRTA0NTRncjJqRXUwZHAiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.NkrxawsvA8fiGArJKBQUg0KIX7skTVPkF0azPh8jEQU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Toyota\",\r\n  \"description\":\"Toyota car\"\r\n  \"order_number\":1\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/brands",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/locations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzcwMTA1NywiZXhwIjoxNTczNzA0NjU3LCJuYmYiOjE1NzM3MDEwNTcsImp0aSI6Ik04MzNVeUxMcjR0TXpLTU4iLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.efGbrzNay1Sp-dJYnjpIdr5RryMI7MBdWiEvG2PaE3Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"lat\":110.001,\r\n  \"lon\":105.090,\r\n  \"name\":\"1000 Tân Bình, Sài Gòn\",\r\n  \"area\":3,\r\n  \"city_id\":1,\r\n  \"district\":\"Quận 1\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/locations",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/locations/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzcwNTgzMCwiZXhwIjoxNTczNzA5NDMwLCJuYmYiOjE1NzM3MDU4MzAsImp0aSI6IlRYZ1hyTW1SSlpSZU5Zd2kiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.jaL3KHZptrtmI8Jq_GxuqMYLZvFfjLAoYWRl0N6V6uU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/locations/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"locations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/locations?offset=0&pageSize=10",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzcwNTgzMCwiZXhwIjoxNTczNzA5NDMwLCJuYmYiOjE1NzM3MDU4MzAsImp0aSI6IlRYZ1hyTW1SSlpSZU5Zd2kiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.jaL3KHZptrtmI8Jq_GxuqMYLZvFfjLAoYWRl0N6V6uU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/locations?offset=0&pageSize=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"locations"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/object-types",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY1ODg4NiwiZXhwIjoxNTczNjYyNDg2LCJuYmYiOjE1NzM2NTg4ODYsImp0aSI6InFwRkdTT1dVOVFuRWdhRmciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.FEWrZUzwN2Tj7W1OvDZfNmyDrl04Tq6wZg6jUrI27hI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"garage\",\r\n\"description\":\"garage\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/object-types",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"object-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/object-types?offset=0&pageSize=10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY1ODg4NiwiZXhwIjoxNTczNjYyNDg2LCJuYmYiOjE1NzM2NTg4ODYsImp0aSI6InFwRkdTT1dVOVFuRWdhRmciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.FEWrZUzwN2Tj7W1OvDZfNmyDrl04Tq6wZg6jUrI27hI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"garage\",\r\n\"description\":\"garage\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/object-types?offset=0&pageSize=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"object-types"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/object-types/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY1ODg4NiwiZXhwIjoxNTczNjYyNDg2LCJuYmYiOjE1NzM2NTg4ODYsImp0aSI6InFwRkdTT1dVOVFuRWdhRmciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.FEWrZUzwN2Tj7W1OvDZfNmyDrl04Tq6wZg6jUrI27hI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"garage\",\r\n\"description\":\"garage\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/object-types/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"object-types",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/object-types/1/sales?offset=0&pageSize=10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY2Nzc3NiwiZXhwIjoxNTczNjcxMzc2LCJuYmYiOjE1NzM2Njc3NzYsImp0aSI6ImdYNERpVmhxaFI2Y3NXZXIiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.4MMBd5kDzFlVT616q6pkQHGxFwcVTmIjqhZ02xoRdw0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"object_type_id\":2,\r\n\"object_detail_id\":null,\r\n\"location_id\":1,\r\n\"rating_number\":9,\r\n\"description\":\"Showrom Hùng Cường\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/object-types/1/sales?offset=0&pageSize=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"object-types",
+						"1",
+						"sales"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/object-types/2/object-locations?offset=0&pageSize=10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY2Nzc3NiwiZXhwIjoxNTczNjcxMzc2LCJuYmYiOjE1NzM2Njc3NzYsImp0aSI6ImdYNERpVmhxaFI2Y3NXZXIiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.4MMBd5kDzFlVT616q6pkQHGxFwcVTmIjqhZ02xoRdw0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"object_type_id\":2,\r\n\"object_detail_id\":null,\r\n\"location_id\":1,\r\n\"rating_number\":9,\r\n\"description\":\"Showrom Hùng Cường\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/object-types/2/object-locations?offset=0&pageSize=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"object-types",
+						"2",
+						"object-locations"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/carmodels",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY1ODg4NiwiZXhwIjoxNTczNjYyNDg2LCJuYmYiOjE1NzM2NTg4ODYsImp0aSI6InFwRkdTT1dVOVFuRWdhRmciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.FEWrZUzwN2Tj7W1OvDZfNmyDrl04Tq6wZg6jUrI27hI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"suv\",\r\n\"description\":\"suv\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/carmodels",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"carmodels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/carmodels/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY1ODg4NiwiZXhwIjoxNTczNjYyNDg2LCJuYmYiOjE1NzM2NTg4ODYsImp0aSI6InFwRkdTT1dVOVFuRWdhRmciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.FEWrZUzwN2Tj7W1OvDZfNmyDrl04Tq6wZg6jUrI27hI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"suv\",\r\n\"description\":\"suv\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/carmodels/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"carmodels",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/carmodels?offset=0&pageSize=10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY1ODg4NiwiZXhwIjoxNTczNjYyNDg2LCJuYmYiOjE1NzM2NTg4ODYsImp0aSI6InFwRkdTT1dVOVFuRWdhRmciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.FEWrZUzwN2Tj7W1OvDZfNmyDrl04Tq6wZg6jUrI27hI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"suv\",\r\n\"description\":\"suv\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/carmodels?offset=0&pageSize=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"carmodels"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/colors",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY1ODg4NiwiZXhwIjoxNTczNjYyNDg2LCJuYmYiOjE1NzM2NTg4ODYsImp0aSI6InFwRkdTT1dVOVFuRWdhRmciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.FEWrZUzwN2Tj7W1OvDZfNmyDrl04Tq6wZg6jUrI27hI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"blue\",\r\n\"code\":\"#004c97\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/colors",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"colors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/colors?offset=0&pageSize=10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY1ODg4NiwiZXhwIjoxNTczNjYyNDg2LCJuYmYiOjE1NzM2NTg4ODYsImp0aSI6InFwRkdTT1dVOVFuRWdhRmciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.FEWrZUzwN2Tj7W1OvDZfNmyDrl04Tq6wZg6jUrI27hI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"suv\",\r\n\"description\":\"suv\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/colors?offset=0&pageSize=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"colors"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/object-locations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY2NDA1NCwiZXhwIjoxNTczNjY3NjU0LCJuYmYiOjE1NzM2NjQwNTQsImp0aSI6IlVhWVhrbHgzdm9sSWVwUEsiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.0XTbjFZhg9Ddv1t6tn_1E-2qDc40ieU_qSzqZhYhU5M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"object_type_id\":1,\r\n\"object_detail_id\":1,\r\n\"location_id\":1,\r\n\"rating_number\":9,\r\n\"description\":\"xe Toyota camry biển 88888\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/object-locations",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"object-locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/object-locations?offset=0&pageSize=10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY2NDA1NCwiZXhwIjoxNTczNjY3NjU0LCJuYmYiOjE1NzM2NjQwNTQsImp0aSI6IlVhWVhrbHgzdm9sSWVwUEsiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.0XTbjFZhg9Ddv1t6tn_1E-2qDc40ieU_qSzqZhYhU5M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"object_type_id\":2,\r\n\"object_detail_id\":null,\r\n\"location_id\":1,\r\n\"rating_number\":9,\r\n\"description\":\"Showrom Hùng Cường\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/object-locations?offset=0&pageSize=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"object-locations"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/object-locations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY2NDA1NCwiZXhwIjoxNTczNjY3NjU0LCJuYmYiOjE1NzM2NjQwNTQsImp0aSI6IlVhWVhrbHgzdm9sSWVwUEsiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.0XTbjFZhg9Ddv1t6tn_1E-2qDc40ieU_qSzqZhYhU5M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"object_type_id\":2,\r\n\"object_detail_id\":null,\r\n\"location_id\":1,\r\n\"rating_number\":9,\r\n\"description\":\"Showrom Hùng Cường\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/object-locations",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"object-locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/cars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzY2NDA1NCwiZXhwIjoxNTczNjY3NjU0LCJuYmYiOjE1NzM2NjQwNTQsImp0aSI6IlVhWVhrbHgzdm9sSWVwUEsiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.0XTbjFZhg9Ddv1t6tn_1E-2qDc40ieU_qSzqZhYhU5M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"Toyota camry biển 88888\",\r\n\"brand_id\":1,\r\n\"model_id\":1,\r\n\"year_manufacture\":2008,\r\n\"price\":10000000,\r\n\"location_id\":1,\r\n\"product_status\":1,\r\n\"kilometers_number\":100000,\r\n\"gearbox_number\":1,\r\n\"fuel\":1,\r\n\"color_id\":1,\r\n\"rating_number\":9,\r\n\"door_number\":5,\r\n\"engine_name\":\"toyota turbo\",\r\n\"power_number\":1000,\r\n\"furniture_type\":1,\r\n\"exterior_type\":1,\r\n\"equipment_type\":1,\r\n\"description\":\"Rất sang trọng và may mắn\",\r\n\"photos\":\r\n[\r\n  \"https://xebin.s3-ap-southeast-1.amazonaws.com/mec-s.jpg\",\r\n  \"https://xebin.s3-ap-southeast-1.amazonaws.com/mec-s.jpg\",\r\n  \"https://xebin.s3-ap-southeast-1.amazonaws.com/mec-s.jpg\",\r\n  \"https://xebin.s3-ap-southeast-1.amazonaws.com/mec-s.jpg\"\r\n]\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/cars",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/cars/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzcwMTA1NywiZXhwIjoxNTczNzA0NjU3LCJuYmYiOjE1NzM3MDEwNTcsImp0aSI6Ik04MzNVeUxMcjR0TXpLTU4iLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.efGbrzNay1Sp-dJYnjpIdr5RryMI7MBdWiEvG2PaE3Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"object_type_id\":2,\r\n\"object_detail_id\":null,\r\n\"location_id\":1,\r\n\"rating_number\":9,\r\n\"description\":\"Showrom Hùng Cường\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/cars/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/cars?offset=0&pageSize=10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzcwNTgzMCwiZXhwIjoxNTczNzA5NDMwLCJuYmYiOjE1NzM3MDU4MzAsImp0aSI6IlRYZ1hyTW1SSlpSZU5Zd2kiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.jaL3KHZptrtmI8Jq_GxuqMYLZvFfjLAoYWRl0N6V6uU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"object_type_id\":2,\r\n\"object_detail_id\":null,\r\n\"location_id\":1,\r\n\"rating_number\":9,\r\n\"description\":\"Showrom Hùng Cường\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/cars?offset=0&pageSize=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cars"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/sales",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzcwMTA1NywiZXhwIjoxNTczNzA0NjU3LCJuYmYiOjE1NzM3MDEwNTcsImp0aSI6Ik04MzNVeUxMcjR0TXpLTU4iLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.efGbrzNay1Sp-dJYnjpIdr5RryMI7MBdWiEvG2PaE3Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"seller_user_id\":1,\r\n\"object_type_id\":1,\r\n\"object_detail_id\":2,\r\n\"status\":1,\r\n\"price\":100000,\r\n\"payment_type\":1,\r\n\"location_id\":2,\r\n\"location_alias\":\"72 Bắc Hải, P.6, Q. Tân bình\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/sales",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/sales/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzcwMTA1NywiZXhwIjoxNTczNzA0NjU3LCJuYmYiOjE1NzM3MDEwNTcsImp0aSI6Ik04MzNVeUxMcjR0TXpLTU4iLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.efGbrzNay1Sp-dJYnjpIdr5RryMI7MBdWiEvG2PaE3Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"object_type_id\":2,\r\n\"object_detail_id\":null,\r\n\"location_id\":1,\r\n\"rating_number\":9,\r\n\"description\":\"Showrom Hùng Cường\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/sales/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sales",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/sales?offset=0&pageSize=10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU3MzcwNTgzMCwiZXhwIjoxNTczNzA5NDMwLCJuYmYiOjE1NzM3MDU4MzAsImp0aSI6IlRYZ1hyTW1SSlpSZU5Zd2kiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.jaL3KHZptrtmI8Jq_GxuqMYLZvFfjLAoYWRl0N6V6uU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"object_type_id\":2,\r\n\"object_detail_id\":null,\r\n\"location_id\":1,\r\n\"rating_number\":9,\r\n\"description\":\"Showrom Hùng Cường\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/sales?offset=0&pageSize=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sales"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
