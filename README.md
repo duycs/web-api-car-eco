@@ -1,5 +1,7 @@
-## Project name
-Xebin web app
+## Car ecosystem web api
+
+#### Criteria
+A project API for transport ecosystem and car trade.
 
 ## Prerequisites
 - PHP >=7
